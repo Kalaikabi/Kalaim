@@ -1,0 +1,65 @@
+# Generating list of integer coordinates for points from (1, 1) to (5, 5)
+points = [(x, y) for x in range(1, 6) for y in range(1, 6)]
+print(points)# Original list
+original_list = [1, 2, 3, 4, 5]
+
+# Creating a new list by multiplying each element by 10 using list comprehension
+new_list = [x * 10 for x in original_list]
+
+# Print the new list
+print(new_list)# Generator function to yield Fibonacci numbers
+def fibonacci_sequence(n):
+    a, b = 0, 1
+    for _ in range(n):
+        yield a
+        a, b = b, a + b
+
+# Using list comprehension to generate the first 20 Fibonacci numbers
+fibonacci_list = [num for num in fibonacci_sequence(20)]
+
+# Print the list of Fibonacci numbers
+print(fibonacci_list)# Generating first 20 odd numbers using list comprehension
+odd_numbers = [num for num in range(1, 41) if num % 2 != 0][:20]
+
+# Generating first 20 even numbers using list comprehension
+even_numbers = [num for num in range(2, 41, 2)][:20]
+
+# Print the lists
+print("First 20 odd numbers:", odd_numbers)
+print("First 20 even numbers:", even_numbers)# Sample list containing positive and negative numbers
+numbers = [3, -5, 7, -2, 0, -8, 4, -1, 9, -6]
+
+# Creating two lists using list comprehension
+positive_numbers = [num for num in numbers if num > 0]
+negative_numbers = [num for num in numbers if num < 0]
+
+# Print the lists
+print("Positive numbers:", positive_numbers)
+print("Negative numbers:", negative_numbers)# Sample list of strings
+strings_list = ['hello', 'world', 'python', 'programming', 'example']
+
+# Convert all strings to uppercase using list comprehension
+uppercase_strings = [s.upper() for s in strings_list]
+
+# Print the uppercase strings
+print(uppercase_strings)# List of temperatures in Fahrenheit
+fahrenheit_temps = [32, 68, 212, 45, 90]
+
+# Convert Fahrenheit to Celsius using list comprehension
+celsius_temps = [(temp - 32) * 5/9 for temp in fahrenheit_temps]
+
+# Print the converted temperatures
+print("Fahrenheit Temperatures:", fahrenheit_temps)
+print("Equivalent Celsius Temperatures:", celsius_temps)import random
+
+# Function to generate random multiples of 4 in the range 40 to 160
+def generate_random_multiple_of_4():
+    return random.randint(10, 40) * 4
+
+# Generate a 4x5 matrix of random multiples of 4
+matrix = [[generate_random_multiple_of_4() for _ in range(5)] for _ in range(4)]
+
+# Print the matrix
+for row in matrix:
+    print(row)# List comprehension equivalent
+a = [n for n in range(10, 30) if n % 2 == 0]
